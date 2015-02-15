@@ -1,13 +1,10 @@
-#ifndef sorter_h
+#ifndef SORTER_h
 #define SORTER_H
 
-class Sorter {
-public:
-    Sorter();
-    int sort(int s[12][2]);
-private:
+namespace sorter {
+    void sort_max(int s[12][2]);
+    void sort_min(int s[12][2]);
     void swap(int *a, int *b);
+}
 
-};
-
-#endif // sorter_h
+#endif // SORTER_H
