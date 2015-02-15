@@ -28,10 +28,10 @@ namespace sorter {
             }
         }
 
-        swap(&s[0][0], &s[max_pos][0]);
-        swap(&s[1][0], &s[max2_pos][0]);
-        swap(&s[0][1], &s[max_pos][1]);
-        swap(&s[1][1], &s[max2_pos][1]);
+        s[0][0] = max;
+        s[0][1] = max_pos;
+        s[1][0] = max2;
+        s[1][1] = max2_pos;
     }
 
     void sort_min(int s[12][2]) {
@@ -39,8 +39,10 @@ namespace sorter {
         int min_pos = s[0][1], min2_pos = s[1][1];
 
         if (min2 < min) {
-            swap(&min, &min2);
-            swap(&min_pos, &min2_pos);
+            min = s[0][0];
+            min2 = s[1][0];
+            min_pos = s[0][1];
+            min2_pos = s[1][1];
         }
 
         for (int j = 2; j < 12; j++) {
@@ -55,10 +57,10 @@ namespace sorter {
             }
         }
 
-        swap(&s[0][0], &s[min_pos][0]);
-        swap(&s[1][0], &s[min2_pos][0]);
-        swap(&s[0][1], &s[min_pos][1]);
-        swap(&s[1][1], &s[min2_pos][1]);
+        s[0][0] = min;
+        s[0][1] = min_pos;
+        s[1][0] = min2;
+        s[1][1] = min2_pos;
     }
 }
 

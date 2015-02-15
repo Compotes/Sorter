@@ -13,9 +13,9 @@ void loop() {
             a[i][1] = i;
         }
   
-        //  sorter::sort_max(a);  // Set two first indexes in array to max values
-        //  sorter::sort_min(a);  // Set two first indexes in array to min values
-        //  sorter::swap();  // Swaps two numbers 
+        //  sorter::sort_max(a); // Set two first indexes in array to max values
+        sorter::sort_min(a); // Set two first indexes in array to min values
+        //  sorter::swap(); // Swaps two numbers 
         
         for (int i = 0; i < 12; i++) {
             Serial.print(a[i][1]);
