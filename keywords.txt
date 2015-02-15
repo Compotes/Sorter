@@ -1,0 +1,4 @@
+sort_max	KEYWORD2
+sort_min	KEYWORD2
+swap	KEYWORD2
+
